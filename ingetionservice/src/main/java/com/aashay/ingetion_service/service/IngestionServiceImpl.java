@@ -1,0 +1,32 @@
+package com.aashay.ingetion_service.service;
+
+import com.aashay.ingetion_service.dto.EnergyUsageDto;
+import com.aashay.kafka.event.EnergyUsageEvent;
+import com.aashay.kafka.event.EnergyUsageEvent;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.stereotype.Service;
+
+@Service
+@Slf4j
+public class IngestionServiceImpl implements IngestionService{
+
+    private final KafkaTemplate<String, EnergyUsageEvent> kafkaTemplate;
+
+    public IngestionServiceImpl(KafkaTemplate<String, EnergyUsageEvent> kafkaTemplate) {
+        this.kafkaTemplate = kafkaTemplate;
+    }
+
+    public void ingestEnergyUsage(EnergyUsageDto input) {
+        // Convert DTO to Event
+        EnergyUsageEvent event = EnergyUsageEvent.builder()
+                .deviceId(input.deviceId())
+                .energyConsumed(input.energyConsumed())
+                .timestamp(input.timestamp())
+                .build();
+
+        // Send to Kafka Topic
+        kafkaTemplate.send("energy-usage", event);
+        log.info("Ingested Energy Usage Event: {}", event);
+    }
+}
