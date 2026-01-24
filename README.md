@@ -39,7 +39,7 @@ A 1.2 kW device used for 30 minutes → `0.6 kWh`
 | Total devices | 50 - 100k |
 | Readings per device | 1/min |
 | Readings per day | ~10-20M |
-| Writes per second | ~80000 |
+| Writes per second | ~8000 |
 | Storage per month | ~4 TB (compressed) |
 
 ---
