@@ -34,12 +34,12 @@ A 1.2 kW device used for 30 minutes → `0.6 kWh`
 
 | Metric | Value |
 |------|------|
-| Monthly active users | 500,000 |
+| Monthly active users | 10k |
 | Devices per user | 5 |
-| Total devices | 2.5 million |
+| Total devices | 50 - 100k |
 | Readings per device | 1/min |
-| Readings per day | ~3.6 billion |
-| Writes per second | ~40,000 |
+| Readings per day | ~10-20M |
+| Writes per second | ~80000 |
 | Storage per month | ~4 TB (compressed) |
 
 ---
