@@ -99,17 +99,6 @@ A 1.2 kW device used for 30 minutes → `0.6 kWh`
 
 ---
 
-## 🛠 Prerequisites
-
-- Java 17+
-- Maven
-- Docker & Docker Compose
-- Apache Kafka
-- MySQL
-- Time-Series DB (TimescaleDB / InfluxDB)
-
----
-
 ## ▶️ Running the Project (Local)
 
 ```bash
