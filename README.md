@@ -94,8 +94,7 @@ A 1.2 kW device used for 30 minutes → `0.6 kWh`
   - MySQL (User, Device, Alerts)
   - Time-Series DB (Usage data)
 - **Containerization:** Docker
-- **Orchestration:** Kubernetes (planned)
-- **AI Integration:** Future enhancement
+- **AI Integration:** Llama Ai 
 
 ---
 
